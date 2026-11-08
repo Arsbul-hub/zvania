@@ -8,6 +8,8 @@ from kivy.uix.screenmanager import SlideTransition
 from kivymd.uix.screen import Screen
 import random
 
+from plyer import vibrator
+
 from app import switch_to
 from app.screens import BaseScreen
 
@@ -84,3 +86,7 @@ class LearnScreen(BaseScreen):
         self.ids.card_text.text = self.current_set[self.current_pos].get("name")
         self.ids.show_answer_button.disabled = True
         self.ids.next_card.disabled = False
+        try:
+            vibrator.vibrate(0.1)
+        except:
+            print("Failed to vibrate")

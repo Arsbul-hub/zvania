@@ -6,10 +6,10 @@
 [app]
 
 # (str) Title of your application
-title = Тест киви
+title = Звания ВС РФ
 
 # (str) Package name
-package.name = kivy_test
+package.name = zvania
 
 # (str) Package domain (needed for android/ios packaging)
 package.domain = org.arsbul
@@ -24,10 +24,10 @@ source.include_exts = py,png,jpg,kv,atlas,json
 #source.include_patterns = assets/*,images/*.png
 
 # (list) Source files to exclude (leave empty to not exclude anything)
-#source.exclude_exts = spec
+source.exclude_exts = spec, md, txt
 
 # (list) List of directory to exclude (leave empty to not exclude anything)
-#source.exclude_dirs = tests, bin, venv,sample_data
+source.exclude_dirs = tests, bin, venv,sample_data
 p4a.branch = develop
 p4a.commit = d2ee8c5
 # (list) List of exclusions using pattern matching
@@ -43,7 +43,7 @@ version = 0.1
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3,kivy,git+https://github.com/oukiar/plyer.git
+requirements = python3,kivy,git+https://github.com/oukiar/plyer.git, PIL
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
@@ -51,9 +51,9 @@ requirements = python3,kivy,git+https://github.com/oukiar/plyer.git
 
 # (str) Presplash of the application
 #presplash.filename = %(source.dir)s/presplash.json
-android.presplash_lottie = %(source.dir)s/presplash.json
+
 # (str) Icon of the application
-icon.filename = %(source.dir)s/icon.png
+icon.filename = %(source.dir)s/app/resources/images/app-icon.png
 
 # (list) Supported orientations
 # Valid options are: landscape, portrait, portrait-reverse, landscape-reverse, or all
@@ -90,13 +90,13 @@ fullscreen = 0
 # red, blue, green, black, white, gray, cyan, magenta, yellow, lightgray,
 # darkgray, grey, lightgrey, darkgrey, aqua, fuchsia, lime, maroon, navy,
 # olive, purple, silver, teal.
-#android.presplash_color = #FFFFFF
+android.presplash_color = #FFFFFF
 
 # (string) Presplash animation using Lottie format.
 # see https://lottiefiles.com/ for examples and https://airbnb.design/lottie/
 # for general documentation.
 # Lottie files can be created using various tools, like Adobe After Effect or Synfig.
-#android.presplash_lottie = "path/to/lottie/file.json"
+android.presplash_lottie = %(source.dir)s/app/resources/images/presplash-animated.json
 
 # (str) Adaptive icon of the application (used if Android API level is 26+ at runtime)
 #icon.adaptive_foreground.filename = %(source.dir)s/data/icon_fg.png
@@ -104,7 +104,7 @@ fullscreen = 0
 
 # (list) Permissions
 # (See https://python-for-android.readthedocs.io/en/latest/buildoptions.html for all the supported syntaxes and properties)
-android.permissions = android.permission.CAMERA, android.permission.POST_NOTIFICATIONS, android.permission.INTERNET, android.permission.FLASHLIGHT, android.permission.VIBRATE, (name=android.permission.WRITE_EXTERNAL_STORAGE;maxSdkVersion=18)
+android.permissions = android.permission.VIBRATE, (name=android.permission.WRITE_EXTERNAL_STORAGE;maxSdkVersion=18)
 
 # (list) features (adds uses-feature -tags to manifest)
 #android.features = android.hardware.usb.host
