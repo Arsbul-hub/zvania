@@ -1,13 +1,11 @@
 from config import Config
 
-import ctypes
 
 from kivy.config import Config as KivyConfig
 
 
 if Config.TEST_PHONE:
-    user32 = ctypes.windll.user32
-    width, height = user32.GetSystemMetrics(0), user32.GetSystemMetrics(1)
+
     KivyConfig.set('kivy', 'show_fps', 1)
     # KivyConfig.set("graphics", "width", int(9 / 16 * height * Config.USE_SCREEN_HEIGHT))
     # KivyConfig.set("graphics", "height", int(height * Config.USE_SCREEN_HEIGHT))

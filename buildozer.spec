@@ -43,7 +43,7 @@ version = 0.1
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3,kivy,git+https://github.com/oukiar/plyer.git, PIL
+requirements = python3,kivy,kivymd,plyer,materialyoucolor==3.0.4,asynckivy==0.6.4,asyncgui==0.6.3
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes

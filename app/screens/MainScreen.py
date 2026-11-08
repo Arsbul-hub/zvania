@@ -1,4 +1,4 @@
-from adodbapi.ado_consts import directions
+
 from kivy.properties import StringProperty
 from kivy.uix.screenmanager import NoTransition, SlideTransition
 from kivymd.uix.screen import Screen

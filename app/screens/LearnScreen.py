@@ -1,6 +1,6 @@
 import json
 import os
-from traceback import print_tb
+
 
 from kivy.loader import Loader
 from kivy.properties import StringProperty
